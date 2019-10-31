@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
 
@@ -11,8 +11,6 @@
             <div class="img"><img src="{{asset('images/loginAvartar.jpg')}}" class="img-fluid img-thumbnail mx-auto" alt="..."></div>
             
         </div>
-
-        <h2 class="text-center"></h2>  
 
         <div class="form-group">    
             <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>
@@ -48,16 +46,8 @@
             <button type="submit"  class="btn btn-primary btn-lg btn-block">
                 {{ __('Login') }}
             </button>
-        </div>      
-        
+        </div>
+        <a href="/register">Create and account.</a>
     </form>
 </div>
-              
-
-
-
-
-
-
-
 @endsection
